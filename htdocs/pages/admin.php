@@ -18,6 +18,20 @@ require_once __DIR__ . '/../includes/header.php';
         <h1>Admin Panel</h1>
         <p>Welcome, Admin! Here you will be able to manage car listings.</p>
         
+        <?php if (isset($_SESSION['success_message'])): ?>
+            <div class="success-message" style="background-color: #d4edda; color: #155724; padding: 15px; border-radius: 4px; margin: 15px 0;">
+                <?= htmlspecialchars($_SESSION['success_message']) ?>
+            </div>
+            <?php unset($_SESSION['success_message']); ?>
+        <?php endif; ?>
+
+        <?php if (isset($_SESSION['error_message'])): ?>
+            <div class="error-message" style="background-color: #f8d7da; color: #721c24; padding: 15px; border-radius: 4px; margin: 15px 0;">
+                <?= htmlspecialchars($_SESSION['error_message']) ?>
+            </div>
+            <?php unset($_SESSION['error_message']); ?>
+        <?php endif; ?>
+
         <h2 style="margin-top: 30px;">Manage Car Listings</h2>
         <?php
         // Database connection is already included via header.php, but ensure $conn is available.

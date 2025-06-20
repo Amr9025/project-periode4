@@ -70,6 +70,7 @@ require_once __DIR__ . "/../database/connection.php";
                     <li><img src="/assets/images/icons/car.svg" alt=""><a href="/my-reservations">Mijn reserveringen</a></li>
                     <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']): ?>
                         <li><i class="fa-solid fa-shield-halved" style="margin-right: 8px; width: 16px; text-align: center; color: #596780;"></i><a href="/admin">Admin Panel</a></li>
+                        <li><i class="fa-solid fa-plus" style="margin-right: 8px; width: 16px; text-align: center; color: #596780;"></i><a href="/admin/add-offer">Nieuwe Aanbieding</a></li>
                     <?php endif; ?>
                     <li><img src="/assets/images/icons/logout.svg" alt=""><a href="/logout">Uitloggen</a></li>
                 </ul>
